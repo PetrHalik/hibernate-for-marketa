@@ -1,0 +1,39 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+  <display-name>Test servlet jdbc</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <display-name>LoginServlet</display-name>
+    <servlet-class>de.irs.fopengine.web.controllers.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ProjectListServlet</servlet-name>
+    <display-name>ProjectListServlet</display-name>
+    <servlet-class>de.irs.fopengine.web.controllers.ProjectListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProjectListServlet</servlet-name>
+    <url-pattern>/projectlist.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ProjectDetailServlet</servlet-name>
+    <display-name>ProjectDetailServlet</display-name>
+    <servlet-class>de.irs.fopengine.web.controllers.ProjectDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProjectDetailServlet</servlet-name>
+    <url-pattern>/projectdetail.do</url-pattern>
+  </servlet-mapping>
+
+</web-app>

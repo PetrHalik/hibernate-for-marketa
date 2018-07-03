@@ -76,7 +76,8 @@ public class HibernateUtil {
             props.put("hibernate.connection.username", "root");
             props.put("hibernate.connection.password", "admin");
             props.put("hibernate.current_session_context_class", "thread");
-
+            props.put("hibernate.show_sql", "true");
+            props.put("hibernate.hbm2ddl.auto", "create");
             configuration.setProperties(props);
 
             //we can set mapping file or class with annotation

@@ -6,11 +6,14 @@ import javax.persistence.*;
 public class Font {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="project_id", nullable=true, unique=false, length=11)
-    private Long projectId;
-    @Column(name="font_name")
+
+    @ManyToOne
+    @JoinColumn(name = "project_id", nullable = false)
+    private Project project;
+
+    @Column(name = "font_name")
     private String fontName;
 
     public Font() {
@@ -18,6 +21,14 @@ public class Font {
 
     public Font(String fontName) {
         this.fontName = fontName;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     public String getFontName() {
@@ -36,19 +47,12 @@ public class Font {
         this.id = id;
     }
 
-//    public Project getProject() {
-//        return project;
-//    }
-//
-//    public void setProject(Project project) {
-//        this.project = project;
-//    }
 
-    public Long getProjectId() {
-        return projectId;
-    }
-
-    public void setProjectId(Long projectId) {
-        this.projectId = projectId;
+    @Override
+    public String toString() {
+        return "Font{" +
+                "id=" + id +
+                ", fontName='" + fontName + '\'' +
+                '}';
     }
 }

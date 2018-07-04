@@ -43,10 +43,10 @@ public class Example01_saveWithoutRelations {
 
 
         Font font1 = new Font("font1");
-        font1.setProjectId(project.getId());
+        font1.setProject(project);
         session.save(font1);
         Font font2 = new Font("font2");
-        font2.setProjectId(project.getId());
+        font2.setProject(project);
         session.save(font2);
         //Commit transaction
         session.getTransaction().commit();

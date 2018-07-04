@@ -31,7 +31,7 @@ public class Example03_delete_update {
         System.out.println(String.format("Fonts after update: %d", getAllFonts_hql().size()));
 
         Font fontNew = new Font("new Font");
-        fontNew.setProjectId(2L);
+     //   fontNew.setProjectId(2L);
         updateFont(fontNew);
         System.out.println(String.format("Fonts after save: %d", getAllFonts_hql().size()));
         HibernateUtil.getSessionJavaConfigFactory().close();

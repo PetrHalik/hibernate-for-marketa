@@ -42,7 +42,7 @@ public class FontRepositoryImpl implements FontRepository {
         String sql = "UPDATE user SET font_name=?, project_id=? WHERE id=?";
         List<String> params = new ArrayList<>();
         params.add(font.getFontName());
-        params.add("" + font.getProjectId());
+        params.add("" + font.getProject());
         params.add("" + font.getId());
         return Database.getInstance().update(sql, params);
     }

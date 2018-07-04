@@ -57,7 +57,7 @@ public class HibernateMain {
         Session session = HibernateUtil.getSessionJavaConfigFactory().openSession();
         Font font = new Font();
         font.setFontName("FontName1");
-        font.setProjectId(1L);
+//        font.setProjectId();
         session.beginTransaction();
         //Save the Model object
         session.save(font);

@@ -47,16 +47,16 @@ public class ExampleUtils {
         session.save(project2);
 
         Font font1 = new Font("font1");
-        font1.setProjectId(project.getId());
+        font1.setProject(project);
         session.save(font1);
         Font font2 = new Font("font2");
-        font2.setProjectId(project.getId());
+        font2.setProject(project);
         session.save(font2);
         Font font3 = new Font("font3");
-        font3.setProjectId(project2.getId());
+        font3.setProject(project2);
         session.save(font3);
         Font font4 = new Font("font4");
-        font4.setProjectId(project2.getId());
+        font4.setProject(project2);
         session.save(font4);
         //Commit transaction
         session.getTransaction().commit();

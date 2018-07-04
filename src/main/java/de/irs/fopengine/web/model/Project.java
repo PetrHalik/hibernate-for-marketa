@@ -10,7 +10,7 @@ import java.util.List;
 public class Project {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id", nullable=true, unique=true, length=11)
+    @Column(name="project_id", nullable=true, unique=true, length=11)
     private Long id;
     private String name;
     private String description;
@@ -28,7 +28,7 @@ public class Project {
     private Info info;
 
 
-    @Transient
+    @OneToMany(mappedBy="project", fetch = FetchType.EAGER)
     private List<Font> fonts;
 
     public Project() {

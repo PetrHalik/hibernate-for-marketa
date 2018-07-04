@@ -8,7 +8,7 @@ public class Font {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    @Column(name="project_id", nullable=false, unique=false, length=11)
+    @Column(name="project_id", nullable=true, unique=false, length=11)
     private Long projectId;
     @Column(name="font_name")
     private String fontName;

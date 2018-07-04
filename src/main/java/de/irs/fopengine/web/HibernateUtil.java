@@ -1,9 +1,7 @@
 package de.irs.fopengine.web;
 import java.util.Properties;
 
-import de.irs.fopengine.web.model.Font;
-import de.irs.fopengine.web.model.Project;
-import de.irs.fopengine.web.model.User;
+import de.irs.fopengine.web.model.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -86,6 +84,8 @@ public class HibernateUtil {
             configuration.addAnnotatedClass(Font.class);
             configuration.addAnnotatedClass(Project.class);
             configuration.addAnnotatedClass(User.class);
+            configuration.addAnnotatedClass(Maven.class);
+            configuration.addAnnotatedClass(Info.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
             System.out.println("Hibernate Java Config serviceRegistry created");

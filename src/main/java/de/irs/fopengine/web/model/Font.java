@@ -16,8 +16,7 @@ public class Font {
     public Font() {
     }
 
-    public Font(Long id, String fontName) {
-        this.id = id;
+    public Font(String fontName) {
         this.fontName = fontName;
     }
 

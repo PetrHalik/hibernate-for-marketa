@@ -3,22 +3,25 @@ package de.irs.fopengine.web;
 import de.irs.fopengine.web.model.Font;
 import de.irs.fopengine.web.model.Project;
 import de.irs.fopengine.web.model.User;
-import org.hibernate.Query;
+
 import org.hibernate.Session;
 
 import java.util.List;
 
 public class HibernateMain {
+
     public static void main(String[] args) {
         //Get Session
         Session session = HibernateUtil.getSessionJavaConfigFactory().getCurrentSession();
         //saveUser(session);
         //saveProject(session);
         saveFont();
-        getAllFonts();
+        List<User> fonts = getAllFonts();
+
         //terminate session factory, otherwise program won't end
         HibernateUtil.getSessionJavaConfigFactory().close();
     }
+
 
     private static List<User> getAllFonts() {
         Session session = HibernateUtil.getSessionJavaConfigFactory().openSession();
